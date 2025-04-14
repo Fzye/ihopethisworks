@@ -20,26 +20,38 @@
     <body>
 
         <div class="row">
-            <div class="image-container"><img id="egg" src="img/egg.png" height="200" width="200" onmouseover="this.src='img/Potion.png';" onmouseout="this.src='img/egg.png';"/></div>
-            <div class="image-container"><img src="img/Lamp.png" height="200" width="200"/></div>
-            <div class="image-container"><img src="img/Bird.png" height="200" width="200"/></div>
+            <div class="image-container"><img id="potion" src="img/potionfinal@2x.png" height="200" width="200" onmouseover="this.src='img/evilpotion.png';" onmouseout="this.src='img/potionfinal@2x.png';"/></div>
+            <div class="image-container"><img id="lantern" src="img/Lamp.png" height="200" width="200"onmouseover="this.src='img/evillamp@2x.png';" onmouseout="this.src='img/lamp.png';"/></div>
+            <div class="image-container"><img id="bird" src="img/birdfinal.png" height="200" width="200" onmouseover="this.src='img/evilbird.png';" onmouseout="this.src='img/birdfinal.png';"/></div>
         </div>
 
         <div class="row">
-            <div class="image-container"><img src="img/Hand.png" height="200" width="200"/></div>
-            <div class="image-container"><img src="img/Potion.png" height="200" width="200"/></div>
-            <div class="image-container"><img src="img/Sword_2.png" height="200" width="200"/></div>
+            <div class="image-container"><img id="egg" src="img/egg.png" height="200" width="200" onmouseover="this.src='img/evileggs.png';" onmouseout="this.src='img/egg.png';"/></div>
+            <div class="image-container"><img id="hand" src="img/hand.png" height="200" width="200" onmouseover="this.src='img/evilhand.png';" onmouseout="this.src='img/hand.png';"/></div>
+            <div class="image-container"><img id="sword" src="img/swordfinal@2x.png" height="200" width="200"onmouseover="this.src='img/evilsword.png';" onmouseout="this.src='img/swordfinal@2x.png';"/></div>
             </div>
 
         <div class="row">
-            <div class="image-container"><img src="img/House.png" height="200" width="200"/></div>
-            <div class="image-container"><img src="img/Fire.png" height="200" width="200"/></div>
-            <div class="image-container"><img src="img/sqr.png" height="200" width="200"/></div>
+            <div class="image-container"><img src="img/housefinal@2x.png" height="200" width="200" onmouseover="this.src='img/evilhouse.png';" onmouseout="this.src='img/housefinal@2x.png';"/></div>
+            <div class="image-container"><img src="img/bow.png" height="200" width="200"/></div>
+            <div class="image-container"><img id="fire" src="img/Fire.png" height="200" width="200"/></div>
+    
         </div>
         <script>
             var sound1 = new buzz.sound("sound/potion.wav")
+            var sound2 = new buzz.sound("sound/sparkle.wav")
+            var sound3 = new buzz.sound("sound/fire.wav")
+            var sound4 = new buzz.sound("sound/sword.wav")
+            var sound5 = new buzz.sound("sound/lantern.wav")
+            var sound6 = new buzz.sound("sound/crow.wav")
+
             window.onload = function() {
-                document.getElementById('egg').addEventListener('mouseover', function () {sound1.play();});
+                document.getElementById('potion').addEventListener('mouseover', function () {sound1.play();});
+                document.getElementById('hand').addEventListener('mouseover', function () {sound2.play();});
+                document.getElementById('fire').addEventListener('mouseover', function () {sound3.play();});
+                document.getElementById('sword').addEventListener('mouseover', function () {sound4.play();});
+                document.getElementById('lantern').addEventListener('mouseover', function () {sound5.play();});
+                document.getElementById('bird').addEventListener('mouseover', function () {sound6.play();});
             };
         </script>
     </body>
