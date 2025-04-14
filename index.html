@@ -3,6 +3,7 @@
     
     <head>
     <title>Icon Template Square</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.2.1/buzz.min.js"></script>
         <style>
             .row{
                 width:720px;
@@ -19,7 +20,7 @@
     <body>
 
         <div class="row">
-            <div class="image-container"><img src="img/egg.png" height="200" width="200"/></div>
+            <div class="image-container"><img id="egg" src="img/egg.png" height="200" width="200" onmouseover="this.src='img/Potion.png';" onmouseout="this.src='img/egg.png';"/></div>
             <div class="image-container"><img src="img/Lamp.png" height="200" width="200"/></div>
             <div class="image-container"><img src="img/Bird.png" height="200" width="200"/></div>
         </div>
@@ -35,7 +36,12 @@
             <div class="image-container"><img src="img/Fire.png" height="200" width="200"/></div>
             <div class="image-container"><img src="img/sqr.png" height="200" width="200"/></div>
         </div>
-        
+        <script>
+            var sound1 = new buzz.sound("sound/potion.wav")
+            window.onload = function() {
+                document.getElementById('egg').addEventListener('mouseover', function () {sound1.play();});
+            };
+        </script>
     </body>
     
 </html>
