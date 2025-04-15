@@ -21,7 +21,7 @@
 
         <div class="row">
             <div class="image-container"><img id="potion" src="img/potionfinal@2x.png" height="200" width="200" onmouseover="this.src='img/evilpotion.png';" onmouseout="this.src='img/potionfinal@2x.png';"/></div>
-            <div class="image-container"><img id="lantern" src="img/Lamp.png" height="200" width="200"onmouseover="this.src='img/evillamp@2x.png';" onmouseout="this.src='img/lamp.png';"/></div>
+            <div class="image-container"><img id="lantern" src="img/Lamp.png" height="200" width="200"onmouseover="this.src='img/evillamp@2x.png';" onmouseout="this.src='img/Lamp.png';"/></div>
             <div class="image-container"><img id="bird" src="img/birdfinal.png" height="200" width="200" onmouseover="this.src='img/evilbird.png';" onmouseout="this.src='img/birdfinal.png';"/></div>
         </div>
 
@@ -32,9 +32,9 @@
             </div>
 
         <div class="row">
-            <div class="image-container"><img src="img/housefinal@2x.png" height="200" width="200" onmouseover="this.src='img/evilhouse.png';" onmouseout="this.src='img/housefinal@2x.png';"/></div>
-            <div class="image-container"><img src="img/bow.png" height="200" width="200"/></div>
-            <div class="image-container"><img id="fire" src="img/Fire.png" height="200" width="200"/></div>
+            <div class="image-container"><img id="house" src="img/housefinal@2x.png" height="200" width="200" onmouseover="this.src='img/evilhouse.png';" onmouseout="this.src='img/housefinal@2x.png';"/></div>
+            <div class="image-container"><img id="bow" src="img/bow.png" height="200" width="200" onmouseover="this.src='img/evilbow.png';" onmouseout="this.src='img/bow.png';"/></div>
+            <div class="image-container"><img id="fire" src="img/fire.png" height="200" width="200" onmouseover="this.src='img/evilfire.png';" onmouseout="this.src='img/fire.png';"/></div>
     
         </div>
         <script>
@@ -44,6 +44,9 @@
             var sound4 = new buzz.sound("sound/sword.wav")
             var sound5 = new buzz.sound("sound/lantern.wav")
             var sound6 = new buzz.sound("sound/crow.wav")
+            var sound7 = new buzz.sound("sound/arrow.wav")
+            var sound8 = new buzz.sound("sound/house.wav")
+            var sound9 = new buzz.sound("sound/egg.wav")
 
             window.onload = function() {
                 document.getElementById('potion').addEventListener('mouseover', function () {sound1.play();});
@@ -52,6 +55,9 @@
                 document.getElementById('sword').addEventListener('mouseover', function () {sound4.play();});
                 document.getElementById('lantern').addEventListener('mouseover', function () {sound5.play();});
                 document.getElementById('bird').addEventListener('mouseover', function () {sound6.play();});
+                document.getElementById('bow').addEventListener('mouseover', function () {sound7.play();});
+                document.getElementById('house').addEventListener('mouseover', function () {sound8.play();});
+                document.getElementById('egg').addEventListener('mouseover', function () {sound9.play();});
             };
         </script>
     </body>
